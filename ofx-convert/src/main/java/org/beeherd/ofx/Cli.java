@@ -21,8 +21,8 @@ public class Cli {
       new AggregateMarshaller().marshal(data, writer);
       writer.flush();
     } finally {
-      try { in.close(); } catch (Exception e) {}
-      try { writer.close(); } catch (Exception e) {}
+      try { in.close(); } catch (Exception e) { e.printStackTrace(); }
+      try { writer.close(); } catch (Exception e) { e.printStackTrace(); }
     }
 
   }
